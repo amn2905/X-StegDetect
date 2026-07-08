@@ -1,0 +1,47 @@
+# Python
+backend/venv/
+backend/__pycache__/
+backend/**/*.pyc
+backend/.env
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Uploads & Reports
+uploads/
+reports/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Python cache
+.pytest_cache/
+.mypy_cache/
+
+# Environment
+.env
+.env.*
+
+# Build
+build/
+dist/
+
+# Models (agar bade ML models hain)
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# Dataset
+*.zip
+*.7z
+*.rar

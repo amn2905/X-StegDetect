@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+    container_name: xsteg_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persist models, uploads and report compilations on host filesystem
+      - ./models:/workspace/models
+      - ./uploads:/workspace/uploads
+      - ./reports:/workspace/reports
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend.Dockerfile
+    container_name: xsteg_frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

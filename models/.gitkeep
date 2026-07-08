@@ -1,0 +1,6 @@
+# Placeholder to preserve the models folder structure.
+# Save your model weights files here:
+# - resnet50.pth
+# - efficientnet.pth
+# - vit.pth
+# - swin.pth

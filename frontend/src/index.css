@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-cyber-bg text-slate-200 font-sans antialiased overflow-x-hidden;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(2, 132, 199, 0.08) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(13, 148, 136, 0.08) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(8, 12, 20, 1) 0px, rgba(5, 7, 12, 1) 100%);
+    background-attachment: fixed;
+  }
+}
+
+/* Glassmorphism Panels */
+.glass-panel {
+  @apply bg-cyber-card border border-cyber-border rounded-xl backdrop-blur-md shadow-glass transition-all duration-300;
+}
+
+.glass-card {
+  @apply bg-slate-950/45 border border-slate-900 rounded-lg p-5 transition-all duration-300 hover:border-slate-800;
+}
+
+.glass-input {
+  @apply bg-slate-950/90 border border-slate-800 rounded px-3 py-2 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-cyber-primary focus:ring-1 focus:ring-cyber-primary/30 transition-all duration-300;
+}
+
+/* Custom UI Elements */
+.neon-btn-primary {
+  @apply bg-cyber-primary hover:bg-cyber-primary/95 text-white font-medium px-4 py-2 rounded-lg transition-all duration-300 hover:shadow-neon-blue active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.neon-btn-secondary {
+  @apply bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium px-4 py-2 rounded-lg transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080c14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}
+
+/* Micro Animations */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.scanner-line {
+  position: relative;
+  overflow: hidden;
+}
+.scanner-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #0284c7, transparent);
+  animation: scanline 2s linear infinite;
+}
+
+.glow-stego {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
+}
+
+.glow-cover {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+}
