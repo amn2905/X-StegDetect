@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/React-Frontend-61DAFB.svg">
   <img src="https://img.shields.io/badge/PyTorch-Deep%20Learning-red.svg">
   <img src="https://img.shields.io/badge/Docker-Containerized-blue.svg">
-  <img src="https://img.shields.io/badge/License-MIT-success.svg">
+  <![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)>
 </p>
 
 ## Overview
